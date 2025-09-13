@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/style2.css">
+    <style>
+        /* Стили для календаря */
+        .calendar {
+            display: none; /* Скрываем календарь по умолчанию */
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .calendar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .calendar th {
+            background-color: #f2f2f2;
+        }
+        .highlight {
+            background-color: #ffeb3b; /* Цвет для отмеченных дней */
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="logo">ROBOTO.SCHOOL <img src="/free-icon-human-3061351.png" alt="" height="35px"></div>
+            <h1 class="header">Личный кабинет</h1>
+            <div class="info">
+                <div class="content1">
+                    <p class="my_pricing_plan1"> Тариф: -ROBO-<br></p>
+                    <p class="name">Имя: Сергей</p>
+                    <p class="email">E-mail: petrushaka@gmail.com</p>
+                    <button class="button" onclick="window.location.href='index.html';">Назад</button>
+                    <button class="button1" onclick="toggleCalendar()">Посмотреть занятия</button>
+                </div>
+            </div>
+            <div id="calendar" class="calendar">
+                <h2>Календарь занятий</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
+                            <th>Вс</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td class="highlight">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td class="highlight">4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td class="highlight">9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td class="highlight">17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td class="highlight">25</td>
+                            <td>26</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleCalendar() {
+            const calendar = document.getElementById('calendar');
+            if (calendar.style.display === 'none' || calendar.style.display === '') {
+                calendar.style.display = 'block';
+            } else {
+                calendar.style.display = 'none';
+            }
+        }
+    </script>
+</

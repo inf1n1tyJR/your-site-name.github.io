@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>roboto_school.com</title>
+</head>
+<body>
+    <section class="section_one">
+        <div class="container">
+            <div class="header">
+                <div class="logo1">ROBOTO.SCHOOL <img src="/free-icon-human-3061351.png" alt="" height="35px"></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#school">О школе</a></li>
+                        <li><a href="#treners">Тренеры</a></li>
+                        <li><a href="#price">Стоимость</a></li>
+                        <li><a href="my_cab.html">Личный кабинет</a></li>
+                    </ul>
+                </div>
+                <div class="content_Header">ROBOTO.SCHOOL</div>
+                <div class="content">Курсы повышения квалификации по робототехнике<br>и программированию для педагогов начальной школы</div>
+                <div class="robot_human"><img src="/free-icon-robot-6585044.png"></div>
+                <button class="button" id="openModal">Записывайся на курс</button>
+                <div class="robot"></div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Запись на курс</h2>
+                    <form>
+                        <label for="name">Имя:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <input type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                var modal = document.getElementById("myModal");
+        
+                var btn = document.getElementById("openModal");
+        
+                var span = document.getElementsByClassName("close")[0];
+        
+                btn.onclick = function() {
+                    modal.style.display = "block";
+                }
+        
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+        
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+
+            <div class="soport">Посмотрите отзовы:</div>
+            <a class="qrcode" href="http://qrcoder.ru" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Firecommend.ru%2F&4&0" width="132" height="132" border="0" title="QR код"></a>
+
+        </div>
+    </section>
+
+    <section class="teacher" id="treners">
+
+        <div class="container">
+
+            <div class="text_section2">Наши профессиональные тренеры</div>
+            <div class="prepods">
+
+                <div class="scrin1 prepod-card">
+                    <div class="prepod1"><img src="/images.jpg"></div>
+                    <div class="text_prepod1">Сергей Иванов</div>
+                    <div class="text_prepod1_1">Преподователь по тестированию веб-приложений</div>
+                </div>
+
+                <div class="scrin2 prepod-card">
+                    <div class="prepod2"><img src="/images.jpg"></div>
+                    <div class="text_prepod2">Артем Костев</div>
+                    <div class="text_prepod2_1">Преподователь по ротобо-программированию</div>
+                </div>
+
+                <div class="scrin3 prepod-card">
+                    <div class="prepod3"><img src="/images.jpg"></div>
+                    <div class="text_prepod3">Иван Мараканов</div>
+                    <div class="text_prepod3_1">Преподователь по веб-дизайн</div>
+                </div>
+
+                <div class="scrin4 prepod-card">
+                    <div class="prepod4"><img src="/images.jpg"></div>
+                    <div class="text_prepod4">Дарья Слепенкова</div>
+                    <div class="text_prepod4_1">Преподователь по КС и ОС</div>
+                </div>
+
+                <div class="scrin5 prepod-card">
+                    <div class="prepod5"><img src="/images.jpg"></div>
+                    <div class="text_prepod5">Валерия Сереброва</div>
+                    <div class="text_prepod5_1">Преподователь по веб-разработке</div>
+                </div>
+
+                <script>
+                    const prepodsContainer = document.querySelector('.prepods');
+
+                    prepodsContainer.addEventListener('touchstart', handleTouchStart, false);
+                    prepodsContainer.addEventListener('touchmove', handleTouchMove, false);
+
+                    let xDown = null;
+                    let yDown = null;
+
+                    function handleTouchStart(evt) {
+                        xDown = evt.touches[0].clientX;
+                        yDown = evt.touches[0].clientY;
+                    };
+
+                    function handleTouchMove(evt) {
+                        if (!xDown || !yDown) {
+                            return;
+                        }
+
+                        var xUp = evt.touches[0].clientX;
+                        var yUp = evt.touches[0].clientY;
+
+                        var xDiff = xDown - xUp;
+                        var yDiff = yDown - yUp;
+
+                        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+                            if (xDiff > 0) {
+                            } else {
+                            }
+                        } else {
+                            if (yDiff > 0) {
+                            } else {
+                            }
+                        }
+                        xDown = null;
+                        yDown = null;
+                    };
+                </script>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="section_three" id="school">
+
+        <div class="container">
+
+            <div class="text_section3">О нас и что вы получите после курса и обучения</div>
+
+                <div class="content_text_section3"> Мы школа ROBOTO.SCHOOL рады преведствовать вас у нас. Мы подготавливаем и тренеруме будущих преподователе <br>для дошкольного обучения по программированию и робото технике.<br>В нашей школе вас будут тренеровать и обучать наш профиссиональные тренеры, со стажем работы 5 лет!<br>Регистрируйтесть быстрее чтобы получить скидку 10%.<br>Вы можете посмотреть, что вы получите у нас в ходе обучени и по её окнчанию:</div>
+                
+                <div class="content_section3">
+
+                    <div class="content1">
+                        <div class="certificate">Сертификат</div>
+                        <div class="certificate1">Дающее право преподавать робототехнику и программирование<br> для детей 6-12 лет в образовательных учреждениях</div>
+                    </div>
+
+                    <div class="content2">
+                        <div class="Knowledge">Знание</div>
+                        <div class="Knowledge1">По основам разработки учебно<br>-методических комплексов <br>по робототехнике и программированию</div>
+                    </div>
+
+                    <div class="content3">
+                        <div class="practice">Практику</div>
+                        <div class="practice1">Возможность пройти практику по преподаванию<br> робототехники на базе R:ED LAB (в оффлайн или онлайн формате)</div>
+                    </div>
+
+                </div>
+        </div>
+
+    </section>
+</section>
+
+<section class="section_five" id="price">
+    <div class="container">
+        <div class="text_content5">Выберите нужный пакет</div>
+        <div class="content_section5">
+            <div class="price_card1">
+                <div class="name_card1">-PRO-</div>
+                <div class="text_price1">20.000</div>
+                <div class="text_card1">УМК по робототехнике <br> и программированию</div>
+                <button class="button3">Оставить заявку</button>
+            </div>
+            <div class="price_card2">
+                <div class="name_card2">-ROBO-</div>
+                <div class="text_price2">15.000</div>
+                <div class="text_card2">УМК <br> по робототехнике</div>
+                <button class="button3">Оставить заявку</button>
+            </div>
+            <div class="price_card3">
+                <div class="name_card3">-PROG-</div>
+                <div class="text_price3">10.000</div>
+                <div class="text_card3">УМК <br> по программированию</div>
+                <button class="button3">Оставить заявку</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="section_four">
+
+    <div class="container">
+        <div class="text_content4">Запишись на курс<br>со скидкой в 10% </div>
+        <div class="text_content4_1">Акция действует до 10.04.2025</div>
+
+        <form class="Forma"id="signupForm ">
+            <input type="text" id="name" placeholder="Ваше имя" required><br>
+            <input type="email" id="email" placeholder="Ваш email" required>
+            <button class="button2" type="submit">Отправить</button>
+        </form>
+        <div id="error-message" style="color: red; display: none;">Пожалуйста, заполните все поля.</div>
+    </div>
+
+</section>
+
+<section class="section_five" id="analytics">
+    <div class="container">
+        <div class="text_content5">Биоаналитика</div>
+        <canvas id="visitsChart" width="400" height="200"></canvas>
+        <canvas id="subscriptionsChart" width="400" height="200"></canvas>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const totalVisits = getRandomInt(1000, 5000);
+    const subscriptions = [
+        getRandomInt(100, 300), 
+        getRandomInt(50, 150), 
+        getRandomInt(20, 100) 
+    ];
+
+    const ctxVisits = document.getElementById('visitsChart').getContext('2d');
+    const visitsChart = new Chart(ctxVisits, {
+        type: 'line',
+        data: {
+            labels: ['Декабрь', 'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь'],
+            datasets: [{
+                label: 'Посещения сайта',
+                data: [getRandomInt(100, 500), getRandomInt(100, 500), getRandomInt(100, 500), getRandomInt(100, 500), getRandomInt(100, 500)],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctxSubscriptions = document.getElementById('subscriptionsChart').getContext('2d');
+    const subscriptionsChart = new Chart(ctxSubscriptions, {
+        type: 'bar',
+        data: {
+            labels: ['Пакет -PRO-', 'Пакет -ROBO-', 'Пакет -PROG-'],
+            datasets: [{
+                label: 'Количество подписок',
+                data: subscriptions,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+
+<script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const errorMessage = document.getElementById('error-message');
+
+        if (!name || !email) {
+            errorMessage.style.display = 'block';
+        } else {
+            errorMessage.style.display = 'none';
+            alert('Данные отправлены!');
+        }
+    });
+</script>
+
+
+</body>
+</html>

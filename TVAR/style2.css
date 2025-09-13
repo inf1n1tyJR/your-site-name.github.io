@@ -1,0 +1,59 @@
+*{
+    margin: 0 auto;
+}
+.container{
+    width: 1140px;
+}
+.section{
+    background: url(i.png);
+    min-height: 1000px;
+}
+.logo{
+    color: aliceblue;
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.header{
+    color: aliceblue;
+    text-align: center;
+    font-size: 35px;
+}
+.name{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px ;
+}
+.my_pricing_plan1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px ;
+    margin-top: 10px ;
+}
+.email{
+    color: aliceblue;
+    text-align: center;
+    font-size: 15px ;
+    margin-top: 10px ;
+}
+
+.button{
+    color: aliceblue;
+    background-color: red;
+    height: 20px;
+    width: 70px;
+    border-radius: 5px;
+    margin-left: 620px;
+    margin-top: 10px;
+}
+.button1{
+    color: aliceblue;
+    background-color: red;
+    height: 55px;
+    width: 90px;
+    border-radius: 5px;
+    margin-left: 620px;
+    margin-top: 10px;
+}
+
